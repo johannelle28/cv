@@ -219,6 +219,17 @@
     .lang + .lang { margin-top: .8mm; }
     .list { list-style: none; font-size: 9pt; }
     .list li + li { margin-top: .8mm; }
+    .bullets li { position: relative; padding-left: 3.6mm; }
+    .bullets li::before {
+      content: "";
+      position: absolute;
+      left: .4mm;
+      top: .62em;
+      width: 1.3mm;
+      height: 1.3mm;
+      border-radius: 50%;
+      background: var(--blue);
+    }
     .lang span:last-child { color: var(--muted); }
 
     @media print {
@@ -405,8 +416,8 @@
 
         <section>
           <h2>Activités parascolaires</h2>
-          <ul class="list">
-            <li>The Hashgraph Association</li>
+          <ul class="list bullets">
+            <li>Hashgraph Association</li>
             <li>Club Blockchain (IFRI)</li>
             <li>Bénévole chez VEDI Action (environnement et économie circulaire)</li>
             <li>Lecture</li>
