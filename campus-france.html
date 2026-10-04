@@ -11,7 +11,6 @@
 
     :root {
       --blue: #000091;      /* bleu France */
-      --red: #e1000f;       /* rouge Marianne */
       --ink: #161616;
       --text: #2a2a2a;
       --muted: #3d3d4a;
@@ -51,7 +50,6 @@
     header {
       padding: 7mm 14mm 5mm;
       border-bottom: 1px solid var(--rule);
-      text-align: center;
     }
 
     h1 {
@@ -72,11 +70,9 @@
     .goal {
       display: inline-block;
       margin-top: 2.5mm;
-      padding: 1.4mm 4mm;
-      background: var(--paper);
-      border-left: 1.4mm solid var(--blue);
-      border-right: 1.4mm solid var(--red);
-      box-shadow: inset 0 1px 0 var(--rule), inset 0 -1px 0 var(--rule);
+      padding: 1.2mm 3mm;
+      border: 1px solid var(--blue);
+      border-left-width: 1mm;
       font-size: 9.4pt;
       font-weight: 500;
       color: var(--blue);
@@ -85,7 +81,6 @@
     .contact {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 1mm 6mm;
       margin-top: 3.5mm;
       list-style: none;
@@ -103,14 +98,14 @@
       flex: 1;
     }
 
-    .main { padding: 5mm 8mm 6mm 14mm; }
+    .main { padding: 5mm 8mm 4mm 14mm; }
 
     aside {
       padding: 5mm 12mm 6mm 7mm;
       border-left: 1px solid var(--rule);
     }
 
-    section + section { margin-top: 4.4mm; }
+    section + section { margin-top: 3.8mm; }
 
     h2 {
       display: flex;
@@ -130,14 +125,14 @@
       content: "";
       width: 2.2mm;
       height: 2.2mm;
-      background: var(--red);
+      background: var(--blue);
       flex-shrink: 0;
     }
 
     .profile { font-size: 9.6pt; }
 
     /* ---------- Entrées ---------- */
-    .entry + .entry { margin-top: 3.2mm; }
+    .entry + .entry { margin-top: 2.6mm; }
 
     .entry-head {
       display: flex;
@@ -184,7 +179,7 @@
       width: 1.3mm;
       height: 1.3mm;
       border-radius: 50%;
-      background: var(--red);
+      background: var(--blue);
     }
 
     .tags {
@@ -214,6 +209,7 @@
       font-size: 9pt;
     }
     .lang + .lang { margin-top: .8mm; }
+    .lang-note { margin-top: 1.2mm; font-size: 8.6pt; color: var(--muted); }
     .lang span:last-child { color: var(--muted); }
 
     @media print {
@@ -235,7 +231,7 @@
 
     <header>
       <h1>Johannelle Gnonlonfoun</h1>
-      <p class="title">Étudiante en Master Systèmes d’information &amp; Réseaux</p>
+      <p class="title">Étudiante en Master 2 Systèmes d’information &amp; Réseaux informatiques</p>
       <p class="goal">Candidate au Master MIAGE — Systèmes d’information · Rentrée 2027</p>
       <ul class="contact">
         <li><b>Adresse</b>Cotonou, Bénin</li>
@@ -251,10 +247,10 @@
         <section>
           <h2>Profil</h2>
           <p class="profile">
-            Étudiante en Master Systèmes d’information et Réseaux à l’IFRI, je souhaite intégrer un Master
-            MIAGE pour mettre l’informatique au service de la gestion des organisations. Mon travail sur un
-            système d’information national et mon stage en développement web m’ont appris à traduire les
-            besoins des utilisateurs en solutions concrètes, en équipe et en mode Agile.
+            Étudiante en Master 2 à l’IFRI, je souhaite intégrer un Master MIAGE pour mettre l’informatique
+            au service de la gestion des organisations. Mon travail sur un système d’information national et
+            mon stage en développement web m’ont appris à traduire les besoins des utilisateurs en solutions
+            concrètes, en équipe et en mode Agile.
           </p>
         </section>
 
@@ -263,10 +259,13 @@
 
           <div class="entry">
             <div class="entry-head">
-              <h3>Master Systèmes d’information &amp; Réseaux</h3>
+              <h3>Master Systèmes d’information &amp; Réseaux informatiques</h3>
               <span class="date">2025 – en cours</span>
             </div>
             <p class="org">IFRI, Université d’Abomey-Calavi, Bénin</p>
+            <ul class="points">
+              <li><strong>Master 2</strong> (2026 – en cours) · <strong>Master 1</strong> (2025 – 2026) validé avec <strong>15,45/20</strong> de moyenne</li>
+            </ul>
             <p class="tags">Bases de données · architecture logicielle · réseaux · cybersécurité · IA · recherche opérationnelle</p>
           </div>
 
@@ -275,7 +274,15 @@
               <h3>Licence Sciences Mathématiques &amp; Informatique</h3>
               <span class="date">2019 – 2022</span>
             </div>
-            <p class="org">Université Ibn Tofail, Kénitra, Maroc</p>
+            <p class="org">Faculté des Sciences, Université Ibn Tofail, Kénitra, Maroc</p>
+          </div>
+
+          <div class="entry">
+            <div class="entry-head">
+              <h3>Baccalauréat — mention Bien</h3>
+              <span class="date">2019</span>
+            </div>
+            <p class="org">Cours GAMA, Cotonou, Bénin</p>
           </div>
         </section>
 
@@ -289,9 +296,9 @@
             </div>
             <p class="org">Complexe Scolaire Les Délices de Dieu, Bénin</p>
             <ul class="points">
-              <li>Saisie et mise à jour des données élèves sur <strong>EDUC MASTER</strong>, le système d’information national de gestion scolaire du Bénin</li>
+              <li>Gestion des données élèves sur <strong>EDUC MASTER</strong>, système d’information scolaire national</li>
               <li>Dématérialisation et gestion numérique des dossiers administratifs</li>
-              <li>Support informatique et accompagnement des enseignants sur les outils numériques</li>
+              <li>Support informatique et accompagnement des enseignants</li>
               <li>Coordination entre l’équipe pédagogique, les parents et les prestataires</li>
             </ul>
           </div>
@@ -318,7 +325,7 @@
               <span class="date">Avril 2026</span>
             </div>
             <ul class="points">
-              <li>Réseau complet d’un siège et de deux agences distantes, simulé sur GNS3 (Cisco IOS)</li>
+              <li>Réseau d’un siège et de deux agences, simulé sur GNS3 (Cisco IOS)</li>
               <li>VLAN, DHCP, NAT, DMZ protégée par pare-feu, tunnels VPN GRE/IPsec</li>
             </ul>
           </div>
@@ -341,7 +348,7 @@
               <span class="date">2022</span>
             </div>
             <ul class="points">
-              <li>Fin de Licence : application de bureau de plus court chemin (Dijkstra), recherche opérationnelle</li>
+              <li>Projet de fin de Licence : recherche du plus court chemin (Dijkstra)</li>
             </ul>
           </div>
         </section>
@@ -377,6 +384,7 @@
           <h2>Langues</h2>
           <div class="lang"><span>Français</span><span>Courant</span></div>
           <div class="lang"><span>Anglais</span><span>Intermédiaire</span></div>
+          <p class="lang-note">Formation d’anglais, Practice Makes Perfect International Language Institute, Cotonou (2023)</p>
         </section>
 
         <section>
