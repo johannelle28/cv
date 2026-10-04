@@ -162,6 +162,13 @@
       margin-bottom: .8mm;
     }
 
+    .level {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 3mm;
+    }
+
     ul.points { list-style: none; }
 
     ul.points li {
@@ -209,7 +216,8 @@
       font-size: 9pt;
     }
     .lang + .lang { margin-top: .8mm; }
-    .lang-note { margin-top: 1.2mm; font-size: 8.6pt; color: var(--muted); }
+    .list { list-style: none; font-size: 9pt; }
+    .list li + li { margin-top: .8mm; }
     .lang span:last-child { color: var(--muted); }
 
     @media print {
@@ -249,8 +257,7 @@
           <p class="profile">
             Étudiante en Master 2 à l’IFRI, je souhaite intégrer un Master MIAGE pour mettre l’informatique
             au service de la gestion des organisations. Mon travail sur un système d’information national et
-            mon stage en informatique réseau m’ont appris à traduire les besoins des utilisateurs en solutions
-            concrètes, en équipe et en mode Agile.
+            mon stage en informatique réseau m’ont appris à répondre aux besoins concrets des utilisateurs.
           </p>
         </section>
 
@@ -258,15 +265,11 @@
           <h2>Formation</h2>
 
           <div class="entry">
-            <div class="entry-head">
-              <h3>Master Systèmes d’information &amp; Réseaux informatiques</h3>
-              <span class="date">2025 – en cours</span>
-            </div>
+            <h3>Master Systèmes d’information &amp; Réseaux informatiques</h3>
             <p class="org">IFRI, Université d’Abomey-Calavi, Bénin</p>
-            <ul class="points">
-              <li><strong>Master 2</strong> (2026 – en cours) · <strong>Master 1</strong> (2025 – 2026) validé avec <strong>15,45/20</strong> de moyenne</li>
-            </ul>
-            <p class="tags">Bases de données · architecture logicielle · réseaux · cybersécurité · IA · recherche opérationnelle</p>
+            <div class="level"><span><strong>Master 2</strong></span><span class="date">2026 – en cours</span></div>
+            <div class="level"><span><strong>Master 1</strong> — mention Bien</span><span class="date">2025 – 2026</span></div>
+            <p class="tags">Bases de données · architecture logicielle · cybersécurité · recherche opérationnelle</p>
           </div>
 
           <div class="entry">
@@ -284,6 +287,14 @@
             </div>
             <p class="org">Cours GAMA, Cotonou, Bénin</p>
           </div>
+
+          <div class="entry">
+            <div class="entry-head">
+              <h3>Formation en anglais</h3>
+              <span class="date">2023</span>
+            </div>
+            <p class="org">Practice Makes Perfect International Language Institute, Cotonou, Bénin</p>
+          </div>
         </section>
 
         <section>
@@ -292,7 +303,7 @@
           <div class="entry">
             <div class="entry-head">
               <h3>Enseignante de CP et assistante de direction</h3>
-              <span class="date">2024</span>
+              <span class="date">Sept. 2024 – Mai 2025</span>
             </div>
             <p class="org">Complexe Scolaire Les Délices de Dieu, Bénin</p>
             <ul class="points">
@@ -335,9 +346,8 @@
               <span class="date">2025 – 2026</span>
             </div>
             <ul class="points">
-              <li>Audit de sécurité d’une application web avec OWASP ZAP (Juice Shop)</li>
+              <li>Audits de sécurité d’applications web (OWASP ZAP) et mobile (MobSF)</li>
               <li>Déploiement sur Kubernetes : mise à l’échelle, HTTPS, politiques réseau</li>
-              <li>Analyse de sécurité d’une application mobile avec MobSF</li>
             </ul>
           </div>
 
@@ -383,12 +393,16 @@
           <h2>Langues</h2>
           <div class="lang"><span>Français</span><span>Courant</span></div>
           <div class="lang"><span>Anglais</span><span>Intermédiaire</span></div>
-          <p class="lang-note">Formation d’anglais, Practice Makes Perfect International Language Institute, Cotonou (2023)</p>
         </section>
 
         <section>
           <h2>Activités</h2>
-          <p class="inline">Club Blockchain (Hedera), IFRI · Bénévolat · Lecture · Bricolage</p>
+          <ul class="list">
+            <li>Club Blockchain (IFRI)</li>
+            <li>Bénévolat</li>
+            <li>Lecture</li>
+            <li>Bricolage</li>
+          </ul>
         </section>
       </aside>
     </div>
