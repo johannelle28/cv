@@ -4,6 +4,7 @@ CV d'une page au format A4, au style épuré et élégant.
 
 - `index.html` : la source du CV (HTML/CSS, polices intégrées dans `fonts/`)
 - `CV_Johannelle_Gnonlonfoun.pdf` : la version PDF prête à envoyer
+- `campus-france.html` / `CV_Campus_France_MIAGE.pdf` : version bleu-blanc-rouge pour la procédure Campus France (candidature Master MIAGE)
 
 ## Modifier et réexporter
 
