@@ -11,12 +11,11 @@
 
     :root {
       --blue: #000091;      /* bleu France */
-      --blue-soft: #eef0fb;
       --red: #e1000f;       /* rouge Marianne */
       --ink: #161616;
       --text: #2a2a2a;
-      --muted: #5c5c6b;
-      --rule: #dcdcea;
+      --muted: #3d3d4a;
+      --rule: #c9cbe8;
       --paper: #ffffff;
     }
 
@@ -24,7 +23,7 @@
 
     @page { size: A4; margin: 0; }
 
-    html { background: #e9eaf2; }
+    html { background: #ececec; }
 
     body {
       font-family: "Inter", Arial, sans-serif;
@@ -42,15 +41,11 @@
       min-height: 297mm;
       margin: 24px auto;
       background: var(--paper);
-      box-shadow: 0 2px 24px rgba(0, 0, 145, .10);
+      box-shadow: 0 2px 24px rgba(0, 0, 0, .10);
     }
 
     /* Bandeau tricolore discret en haut de page */
-    .flag { display: flex; flex-shrink: 0; height: 2.2mm; }
-    .flag span { flex: 1; }
-    .flag .b { background: var(--blue); }
-    .flag .w { background: var(--paper); }
-    .flag .r { background: var(--red); }
+    .flag { flex-shrink: 0; height: 2.2mm; background: var(--blue); }
 
     /* ---------- En-tête ---------- */
     header {
@@ -77,8 +72,8 @@
       display: inline-block;
       margin-top: 2.5mm;
       padding: 1.2mm 3mm;
-      border-left: 1mm solid var(--red);
-      background: var(--blue-soft);
+      border: 1px solid var(--blue);
+      border-left-width: 1mm;
       font-size: 9.4pt;
       font-weight: 500;
       color: var(--blue);
@@ -108,7 +103,7 @@
 
     aside {
       padding: 5mm 12mm 6mm 7mm;
-      background: var(--blue-soft);
+      border-left: 1px solid var(--rule);
     }
 
     section + section { margin-top: 4.4mm; }
@@ -131,7 +126,7 @@
       content: "";
       width: 2.2mm;
       height: 2.2mm;
-      background: var(--red);
+      background: var(--blue);
       flex-shrink: 0;
     }
 
@@ -155,9 +150,9 @@
 
     .date {
       flex-shrink: 0;
-      font-size: 8.8pt;
+      font-size: 9.6pt;
       font-weight: 600;
-      color: var(--red);
+      color: var(--ink);
       font-variant-numeric: tabular-nums;
     }
 
@@ -185,7 +180,7 @@
       width: 1.3mm;
       height: 1.3mm;
       border-radius: 50%;
-      background: var(--blue);
+      background: var(--red);
     }
 
     .tags {
@@ -232,7 +227,7 @@
 </head>
 <body>
   <main class="page">
-    <div class="flag"><span class="b"></span><span class="w"></span><span class="r"></span></div>
+    <div class="flag"></div>
 
     <header>
       <h1>Johannelle Gnonlonfoun</h1>
